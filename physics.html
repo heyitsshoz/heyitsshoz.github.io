@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>PHYSICS - YUSUF TAHIR</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-lowest": "#0e0e0e",
+                "background": "#141313",
+                "on-background": "#e5e2e1",
+                "primary": "#ffffff",
+                "on-surface-variant": "#c4c7c8",
+                "krea-accent": "#8d99ae",
+                "highlight-amber": "#e5b567",
+            },
+            "spacing": { "margin-safe": "12vw" },
+            "fontFamily": {
+                "display-lg": ["Bodoni Moda"],
+                "data-mono": ["JetBrains Mono"],
+                "body-reading": ["Bodoni Moda"],
+                "headline-md": ["Bodoni Moda"]
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body { background-color: #141313; color: #e5e2e1; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #141313; }
+        ::-webkit-scrollbar-thumb { background: #353434; border-radius: 3px; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col relative selection:bg-surface-variant selection:text-primary">
+
+    <!-- Dynamic Background -->
+    <div class="fixed inset-0 w-full h-full z-0 overflow-hidden bg-background pointer-events-none">
+        <canvas id="quantum-canvas" class="w-full h-full opacity-60 mix-blend-screen"></canvas>
+        <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
+        <!-- Cinematic Vignette -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#141313_100%)] opacity-80 mix-blend-multiply pointer-events-none"></div>
+    </div>
+
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 flex justify-between items-end px-margin-safe pt-8 pb-4 transition-all duration-700 bg-transparent" id="top-nav">
+        <div class="flex items-center gap-8">
+            <a href="index.html" class="font-display-lg text-2xl md:text-3xl text-primary tracking-tighter hover:opacity-70 transition-opacity">Y. TAHIR</a>
+            <nav class="hidden md:flex gap-8 items-end pb-1">
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-primary border-b border-primary pb-1 hover:tracking-widest transition-all duration-700 ease-in-out" href="physics.html">PHYSICS</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out" href="cs.html">COMPUTER SCIENCE</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out" href="mathematics.html">MATHEMATICS</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out" href="prose.html">PROSE</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-6 font-data-mono text-xs">
+            <a href="index.html" class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity hidden md:block"><- BACK TO LEDGER</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col relative z-10 px-margin-safe pt-[20vh] pb-32">
+        <div class="max-w-4xl mx-auto w-full">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="material-symbols-outlined text-highlight-amber">stream</span>
+                <div class="font-data-mono text-[11px] tracking-widest text-highlight-amber">SUBJECT_MATTER</div>
+            </div>
+            <h1 class="font-headline-md text-5xl md:text-6xl text-primary mb-12 tracking-wide border-b border-white/10 pb-8">PHYSICS</h1>
+            
+            <article class="prose prose-invert prose-lg font-body-reading text-on-surface-variant/90 leading-relaxed">
+                <p class="font-data-mono text-sm tracking-widest opacity-70">
+                    [ WILL UPDATE SOON! ]
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        const canvas = document.getElementById('quantum-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width, height;
+        let time = 0;
+        let mouseX = -1000;
+        let mouseY = -1000;
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            width = canvas.width;
+            height = canvas.height;
+        }
+
+        function animate() {
+            ctx.fillStyle = 'rgba(20, 19, 19, 0.15)';
+            ctx.fillRect(0, 0, width, height);
+
+            time += 0.02;
+
+            const spacing = 35;
+            const rows = Math.floor(height / spacing) + 1;
+            const cols = Math.floor(width / spacing) + 1;
+
+            for (let y = 0; y <= rows; y++) {
+                for (let x = 0; x <= cols; x++) {
+                    const px = x * spacing;
+                    const py = y * spacing;
+
+                    // Dual wave source interference (double-slit style)
+                    const src1X = width / 3;
+                    const src1Y = height / 2;
+                    const src2X = 2 * width / 3;
+                    const src2Y = height / 2;
+
+                    const d1 = Math.sqrt((px - src1X) ** 2 + (py - src1Y) ** 2);
+                    const d2 = Math.sqrt((px - src2X) ** 2 + (py - src2Y) ** 2);
+
+                    const wave1 = Math.sin(d1 * 0.04 - time);
+                    const wave2 = Math.sin(d2 * 0.04 - time);
+                    const interference = wave1 + wave2;
+
+                    // Mouse interaction
+                    const mdx = px - mouseX;
+                    const mdy = py - mouseY;
+                    const distToMouse = Math.sqrt(mdx * mdx + mdy * mdy);
+                    let mousePull = 0;
+                    if (distToMouse < 250) {
+                        mousePull = Math.sin((250 - distToMouse) * 0.05) * 12;
+                    }
+
+                    const offsetX = Math.cos(time + interference) * 12 + (mdx / distToMouse || 0) * mousePull;
+                    const offsetY = Math.sin(time + interference) * 12 + (mdy / distToMouse || 0) * mousePull;
+
+                    // Golden highlight for high amplitude nodes, steel blue for low
+                    const intensity = Math.abs(interference) / 2;
+                    if (intensity > 0.8) {
+                        ctx.fillStyle = `rgba(229, 181, 103, ${0.1 + intensity * 0.4})`; // highlight-amber
+                    } else {
+                        ctx.fillStyle = `rgba(141, 153, 174, ${0.1 + intensity * 0.3})`; // krea-accent
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(px + offsetX, py + offsetY, 1.5 + intensity * 2, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', resize);
+        window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        resize();
+        animate();
+    </script>
+</body>
+</html>

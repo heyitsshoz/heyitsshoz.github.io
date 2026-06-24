@@ -1,87 +1,92 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>YUSUF TAHIR - LEDGER</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
     <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary-fixed-dim": "#cbc5c1",
-                    "surface-container-high": "#2a2a2a",
-                    "inverse-primary": "#5d5f5f",
-                    "surface": "#141313",
-                    "primary": "#ffffff",
-                    "on-primary": "#2f3131",
-                    "surface-bright": "#3a3939",
-                    "secondary-fixed": "#e5e2e1",
-                    "on-tertiary": "#33302d",
-                    "on-primary-fixed": "#1a1c1c",
-                    "inverse-on-surface": "#313030",
-                    "surface-tint": "#c6c6c7",
-                    "primary-fixed": "#e2e2e2",
-                    "on-tertiary-fixed-variant": "#494643",
-                    "secondary-container": "#474646",
-                    "on-tertiary-container": "#686460",
-                    "on-secondary-container": "#b7b4b4",
-                    "surface-variant": "#353434",
-                    "surface-container-lowest": "#0e0e0e",
-                    "on-primary-container": "#636565",
-                    "on-secondary-fixed-variant": "#474646",
-                    "error": "#ffb4ab",
-                    "tertiary-container": "#e8e1dc",
-                    "background": "#141313",
-                    "surface-dim": "#141313",
-                    "on-secondary-fixed": "#1c1b1b",
-                    "secondary-fixed-dim": "#c9c6c5",
-                    "secondary": "#c9c6c5",
-                    "primary-fixed-dim": "#c6c6c7",
-                    "on-surface-variant": "#c4c7c8",
-                    "tertiary-fixed": "#e8e1dc",
-                    "on-error-container": "#ffdad6",
-                    "surface-container-highest": "#353434",
-                    "outline": "#8e9192",
-                    "on-primary-fixed-variant": "#454747",
-                    "on-surface": "#e5e2e1",
-                    "inverse-surface": "#e5e2e1",
-                    "outline-variant": "#444748",
-                    "on-secondary": "#313030",
-                    "on-tertiary-fixed": "#1d1b18",
-                    "on-background": "#e5e2e1",
-                    "error-container": "#93000a",
-                    "surface-container-low": "#1c1b1b",
-                    "tertiary": "#ffffff",
-                    "primary-container": "#e2e2e2",
-                    "on-error": "#690005",
-                    "surface-container": "#201f1f",
-                    "highlight-amber": "#e5b567",
-                    "krea-accent": "#8d99ae"
-            },
-            "spacing": {
-                    "unit": "8px",
-                    "gutter-technical": "24px",
-                    "section-gap": "160px",
-                    "margin-safe": "12vw"
-            },
-            "fontFamily": {
-                    "metadata-sm": ["JetBrains Mono"],
-                    "headline-md": ["Bodoni Moda"],
-                    "display-lg": ["Bodoni Moda"],
-                    "display-lg-mobile": ["Bodoni Moda"],
-                    "data-mono": ["JetBrains Mono"],
-                    "body-reading": ["Bodoni Moda"]
-            },
-          },
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#cbc5c1",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-primary": "#5d5f5f",
+                        "surface": "#141313",
+                        "primary": "#ffffff",
+                        "on-primary": "#2f3131",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary": "#33302d",
+                        "on-primary-fixed": "#1a1c1c",
+                        "inverse-on-surface": "#313030",
+                        "surface-tint": "#c6c6c7",
+                        "primary-fixed": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#494643",
+                        "secondary-container": "#474646",
+                        "on-tertiary-container": "#686460",
+                        "on-secondary-container": "#b7b4b4",
+                        "surface-variant": "#353434",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-container": "#636565",
+                        "on-secondary-fixed-variant": "#474646",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#e8e1dc",
+                        "background": "#141313",
+                        "surface-dim": "#141313",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "secondary": "#c9c6c5",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-surface-variant": "#c4c7c8",
+                        "tertiary-fixed": "#e8e1dc",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#353434",
+                        "outline": "#8e9192",
+                        "on-primary-fixed-variant": "#454747",
+                        "on-surface": "#e5e2e1",
+                        "inverse-surface": "#e5e2e1",
+                        "outline-variant": "#444748",
+                        "on-secondary": "#313030",
+                        "on-tertiary-fixed": "#1d1b18",
+                        "on-background": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary": "#ffffff",
+                        "primary-container": "#e2e2e2",
+                        "on-error": "#690005",
+                        "surface-container": "#201f1f",
+                        "highlight-amber": "#e5b567",
+                        "krea-accent": "#8d99ae"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter-technical": "24px",
+                        "section-gap": "160px",
+                        "margin-safe": "12vw"
+                    },
+                    "fontFamily": {
+                        "metadata-sm": ["JetBrains Mono"],
+                        "headline-md": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "display-lg-mobile": ["Bodoni Moda"],
+                        "data-mono": ["JetBrains Mono"],
+                        "body-reading": ["Bodoni Moda"]
+                    },
+                },
+            }
         }
-      }
     </script>
     <style>
         body {
@@ -97,7 +102,7 @@
             opacity: 0;
             filter: blur(20px);
         }
-        
+
         .fade-in-delayed {
             animation: fadeInBlur 4s cubic-bezier(0.2, 0.8, 0.2, 1) 1.5s forwards;
             opacity: 0;
@@ -105,8 +110,17 @@
         }
 
         @keyframes fadeInBlur {
-            from { opacity: 0; transform: translateY(20px); filter: blur(20px); }
-            to { opacity: 1; transform: translateY(0); filter: blur(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+                filter: blur(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: blur(0);
+            }
         }
 
         #quantum-canvas {
@@ -118,13 +132,13 @@
             z-index: 0;
             pointer-events: none;
         }
-        
+
         .content-block {
             opacity: 0;
             transform: translateY(40px);
             transition: all 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
-        
+
         .content-block.visible {
             opacity: 1;
             transform: translateY(0);
@@ -134,41 +148,100 @@
         ::-webkit-scrollbar {
             width: 6px;
         }
+
         ::-webkit-scrollbar-track {
             background: #141313;
         }
+
         ::-webkit-scrollbar-thumb {
             background: #353434;
             border-radius: 3px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: #8d99ae;
         }
+
+        #mobile-menu {
+            display: none; position: fixed; inset: 0; z-index: 49;
+            background: rgba(20,19,19,0.97); backdrop-filter: blur(20px);
+            flex-direction: column; justify-content: center; align-items: center; gap: 2.5rem;
+        }
+        #mobile-menu.open { display: flex; }
+        #hamburger { display: none; }
+        
+        @media (max-width: 767px) {
+            #hamburger { display: flex; }
+            .px-margin-safe { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+            h1 { font-size: 3.5rem !important; line-height: 1.1 !important; }
+            h2 { font-size: 2.5rem !important; line-height: 1.1 !important; }
+            h3 { font-size: 1.5rem !important; }
+            #hero { padding-top: 25vh !important; }
+            aside { display: none !important; }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .px-margin-safe { padding-left: 4vw !important; padding-right: 4vw !important; }
+            aside { display: none !important; }
+        }
     </style>
 </head>
-<body class="bg-background text-on-background antialiased min-h-screen flex flex-col relative selection:bg-surface-variant selection:text-primary">
+
+<body
+    class="bg-background text-on-background antialiased min-h-screen flex flex-col relative selection:bg-surface-variant selection:text-primary">
     <canvas id="quantum-canvas"></canvas>
-    
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+        <a href="#hero" class="font-display-lg text-3xl text-primary tracking-tighter border-b border-primary pb-1">Y. TAHIR</a>
+        <nav class="flex flex-col items-center gap-6 mt-4">
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-60" href="physics.html">PHYSICS</a>
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-60" href="cs.html">COMPUTER SCIENCE</a>
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-60" href="mathematics.html">MATHEMATICS</a>
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-60" href="prose.html">PROSE</a>
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-60" href="#node-03">ABOUT</a>
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-krea-accent mt-4" href="cv.pdf" target="_blank">VIEW CV &nearr;</a>
+        </nav>
+    </div>
+
     <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 flex justify-between items-end px-margin-safe pt-8 pb-4 transition-all duration-700 bg-transparent" id="top-nav">
+    <header
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-safe pt-6 pb-4 transition-all duration-700 bg-transparent"
+        id="top-nav">
         <div class="flex items-center gap-8">
-            <a href="index.html" class="font-display-lg text-2xl md:text-3xl text-primary tracking-tighter border-b border-primary pb-1">Y. TAHIR</a>
+            <a href="index.html"
+                class="font-display-lg text-xl md:text-3xl text-primary tracking-tighter hover:opacity-70 transition-opacity">Y.
+                TAHIR</a>
             <nav class="hidden md:flex gap-8 items-end pb-1">
-                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out" href="physics.html">PHYSICS</a>
-                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out" href="cs.html">COMPUTER SCIENCE</a>
-                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out" href="mathematics.html">MATHEMATICS</a>
-                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out" href="prose.html">PROSE</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out"
+                    href="physics.html">PHYSICS</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out"
+                    href="cs.html">COMPUTER SCIENCE</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out"
+                    href="mathematics.html">MATHEMATICS</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out"
+                    href="prose.html">PROSE</a>
             </nav>
         </div>
-        <div class="flex items-center gap-6 font-data-mono text-xs">
-            <a href="cv.pdf" target="_blank" class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity hidden md:block">CV.PDF</a>
-            <a href="https://github.com/heyitsshoz" target="_blank" class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity hidden md:block">GITHUB</a>
-            <a href="https://scholar.google.com/citations?hl=en&user=Ff4yDuoAAAAJ" target="_blank" class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity hidden md:block">SCHOLAR</a>
+        <div class="flex items-center gap-4 font-data-mono text-xs">
+            <a href="mailto:yusuf_tahir.sias25@krea.ac.in"
+                class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity hidden md:block">CONTACT</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=Ff4yDuoAAAAJ" target="_blank"
+                class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity hidden md:block">SCHOLAR</a>
+            <a href="https://github.com/heyitsshoz" target="_blank"
+                class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity hidden md:block">GITHUB</a>
+            <a href="https://linkedin.com/in/yusuftahir" target="_blank"
+                class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity hidden md:block">LINKEDIN</a>
+            <button id="hamburger" class="flex flex-col gap-1.5 p-2 z-50" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="block w-6 h-px bg-primary transition-all duration-300" id="bar1"></span>
+                <span class="block w-6 h-px bg-primary transition-all duration-300" id="bar2"></span>
+                <span class="block w-4 h-px bg-primary transition-all duration-300" id="bar3"></span>
+            </button>
         </div>
     </header>
 
     <!-- SideNavBar -->
-    <aside class="fixed left-0 top-1/2 -translate-y-1/2 h-auto flex flex-col gap-8 pl-8 hidden md:flex z-40 bg-transparent">
+    <aside
+        class="fixed left-0 top-1/2 -translate-y-1/2 h-auto flex flex-col gap-8 pl-8 hidden md:flex z-40 bg-transparent">
         <div class="mb-12 opacity-50 pl-4">
             <div class="font-headline-md text-xl text-primary mb-2 cursor-default relative group">
                 RESEARCH_LEDGER
@@ -176,15 +249,18 @@
             <div class="font-data-mono text-xs text-on-surface-variant tracking-widest">V.2026.A</div>
         </div>
         <nav class="flex flex-col gap-6 pl-4">
-            <a class="font-data-mono text-xs text-primary before:content-['>'] before:mr-2 hover:translate-x-2 transition-transform duration-300 flex items-center gap-3" href="#node-01">
+            <a class="font-data-mono text-xs text-primary before:content-['>'] before:mr-2 hover:translate-x-2 transition-transform duration-300 flex items-center gap-3"
+                href="#node-01">
                 <span class="material-symbols-outlined text-[16px]">waves</span>
                 NODE_01
             </a>
-            <a class="font-data-mono text-xs text-on-surface-variant opacity-30 hover:opacity-100 hover:translate-x-2 transition-transform duration-300 flex items-center gap-3" href="#node-02">
+            <a class="font-data-mono text-xs text-on-surface-variant opacity-30 hover:opacity-100 hover:translate-x-2 transition-transform duration-300 flex items-center gap-3"
+                href="#node-02">
                 <span class="material-symbols-outlined text-[16px]">account_tree</span>
                 NODE_02
             </a>
-            <a class="font-data-mono text-xs text-on-surface-variant opacity-30 hover:opacity-100 hover:translate-x-2 transition-transform duration-300 flex items-center gap-3" href="#node-03">
+            <a class="font-data-mono text-xs text-on-surface-variant opacity-30 hover:opacity-100 hover:translate-x-2 transition-transform duration-300 flex items-center gap-3"
+                href="#node-03">
                 <span class="material-symbols-outlined text-[16px]">category</span>
                 NODE_03
             </a>
@@ -194,35 +270,43 @@
     <!-- Main Content Canvas -->
     <main class="flex-grow flex flex-col relative z-10">
         <!-- Hero Section -->
-        <section class="h-[100vh] flex items-center justify-center relative w-full mb-[20vh]">
+        <section class="h-[100vh] flex items-center justify-center relative w-full mb-12 md:mb-[20vh]">
             <!-- Corner Metadata (Top Right) -->
-            <div class="absolute top-[120px] right-margin-safe font-data-mono text-[11px] leading-relaxed text-on-surface-variant opacity-50 text-right" id="dynamic-coords">
-                [ LAT: 13.5507 N, LON: 79.9995 E ]<br/>
-                LOC: KREA_UNIV<br/>
+            <div class="absolute top-[120px] right-margin-safe font-data-mono text-[11px] leading-relaxed text-on-surface-variant opacity-50 text-right hidden md:block"
+                id="dynamic-coords">
+                [ LAT: 13.5507 N, LON: 79.9995 E ]<br />
+                LOC: KREA_UNIV<br />
                 SYS.INIT: <span id="sys-time"></span>
             </div>
-            
+
             <!-- Corner Metadata (Bottom Left) -->
-            <div class="absolute bottom-[120px] left-margin-safe font-data-mono text-[11px] leading-relaxed text-on-surface-variant opacity-50">
-                STATUS: ACTIVE<br/>
+            <div
+                class="absolute bottom-[120px] left-margin-safe font-data-mono text-[11px] leading-relaxed text-on-surface-variant opacity-50 hidden md:block">
+                STATUS: ACTIVE<br />
                 SYSTEM_STATE: <span class="text-highlight-amber">LEDGER_ACTIVE</span>
             </div>
-            
+
             <!-- Central Typography -->
             <div class="text-center flex flex-col items-center justify-center max-w-4xl mx-auto z-20">
-                <p class="font-data-mono text-sm text-on-surface-variant tracking-[0.4em] uppercase max-w-xl mx-auto fade-in-delayed mb-4">
+                <p
+                    class="font-data-mono text-sm text-on-surface-variant tracking-[0.4em] uppercase max-w-xl mx-auto fade-in-delayed mb-4">
                     LEDGER
                 </p>
-                <h2 class="font-headline-md text-6xl md:text-8xl text-primary opacity-90 tracking-wide fade-in-slow">YUSUF TAHIR</h2>
+                <h2 class="font-headline-md text-6xl md:text-8xl text-primary opacity-90 tracking-wide fade-in-slow">
+                    YUSUF TAHIR</h2>
                 <div class="flex items-center justify-center gap-6 mt-8 fade-in-delayed">
-                    <span class="text-4xl md:text-5xl text-primary opacity-80" style="font-family: 'Amiri', serif;">يوسف طاهر</span>
+                    <span class="text-4xl md:text-5xl text-primary opacity-80" style="font-family: 'Amiri', serif;">يوسف
+                        طاهر</span>
                     <span class="w-px h-8 bg-on-surface-variant opacity-30"></span>
-                    <span class="font-data-mono text-xs md:text-sm text-on-surface-variant opacity-60 tracking-[0.3em]">[ˈjuːsʊf ˈtɑːhɪɾ]</span>
+                    <span
+                        class="font-data-mono text-xs md:text-sm text-on-surface-variant opacity-60 tracking-[0.3em]">[ˈjuːsʊf
+                        ˈtɑːhɪɾ]</span>
                 </div>
             </div>
-            
+
             <!-- Scroll Indicator -->
-            <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40 fade-in-delayed">
+            <div
+                class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-40 fade-in-delayed">
                 <span class="font-data-mono text-[10px] tracking-widest mb-3 text-on-surface-variant">SCROLL</span>
                 <div class="w-px h-16 bg-on-surface-variant overflow-hidden relative">
                     <div class="absolute top-0 left-0 w-full h-1/2 bg-primary animate-[bounce_2s_infinite]"></div>
@@ -231,11 +315,14 @@
         </section>
 
         <!-- Intro Section -->
-        <section class="min-h-[60vh] flex flex-col items-center justify-center relative w-full z-20 px-margin-safe pb-24 pt-12">
-            <div class="content-block text-center max-w-4xl mx-auto bg-background/80 backdrop-blur-xl p-8 md:p-12 rounded-2xl border border-white/5 shadow-2xl">
-                <p class="font-body-reading text-2xl md:text-4xl leading-relaxed text-primary">
+        <section
+            class="min-h-auto md:min-h-[60vh] flex flex-col items-center justify-center relative w-full z-20 px-margin-safe pb-24 pt-4 md:pt-12">
+            <div
+                class="content-block text-center max-w-4xl mx-auto bg-background/80 backdrop-blur-xl p-6 md:p-12 rounded-2xl border border-white/5 shadow-2xl">
+                <p class="font-body-reading text-[1.1rem] md:text-4xl leading-relaxed text-primary">
                     Double-majoring in Computer Science and Mathematics at Krea University.
-                    Working at the intersection of quantum computing, machine learning theory, and mathematical optimization.
+                    Working at the intersection of quantum computing, machine learning theory, and mathematical
+                    optimization.
                     I combine theoretical analysis, mathematical proof techniques, and computational simulation.
                     My research spans quantum routing, amplitude amplification, and variational quantum algorithms.
                     I contribute to research manuscripts and open-source quantum software projects,
@@ -246,29 +333,43 @@
 
         <!-- Node 01 Section -->
         <section class="px-margin-safe py-16 flex flex-col justify-start relative z-20" id="node-01">
-            <div class="max-w-4xl mx-auto w-full content-block bg-background/60 backdrop-blur-xl p-10 md:p-16 rounded-2xl border border-white/5 shadow-2xl">
+            <div
+                class="max-w-4xl mx-auto w-full content-block bg-background/60 backdrop-blur-xl p-10 md:p-16 rounded-2xl border border-white/5 shadow-2xl">
                 <div class="flex items-center gap-4 mb-8">
                     <span class="material-symbols-outlined text-highlight-amber">waves</span>
                     <div class="font-data-mono text-[11px] tracking-widest text-highlight-amber">NODE_01</div>
                 </div>
-                <h2 class="font-headline-md text-4xl md:text-5xl text-primary mb-16 tracking-wide border-b border-white/10 pb-8">NODE_01: RESEARCH & PUBLICATIONS</h2>
-                
+                <h2
+                    class="font-headline-md text-4xl md:text-5xl text-primary mb-16 tracking-wide border-b border-white/10 pb-8">
+                    NODE_01: RESEARCH & PUBLICATIONS</h2>
+
                 <div class="space-y-16">
                     <!-- Paper 1 -->
-                    <article class="group relative border-l border-white/10 pl-6 md:pl-10 hover:border-highlight-amber/50 transition-colors duration-500">
-                        <div class="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-surface-container border border-white/20 group-hover:bg-highlight-amber transition-colors"></div>
-                        <h3 class="font-headline-md text-2xl md:text-3xl text-primary mb-3"><a href="https://arxiv.org/abs/2606.14447" target="_blank" class="hover:underline decoration-white/30 underline-offset-4">Dealing with locality in QAOA</a></h3>
-                        <div class="font-data-mono text-xs text-on-surface-variant mb-6 flex flex-wrap gap-4 opacity-70 items-center">
+                    <article
+                        class="group relative border-l border-white/10 pl-6 md:pl-10 hover:border-highlight-amber/50 transition-colors duration-500">
+                        <div
+                            class="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-surface-container border border-white/20 group-hover:bg-highlight-amber transition-colors">
+                        </div>
+                        <h3 class="font-headline-md text-2xl md:text-3xl text-primary mb-3"><a
+                                href="https://arxiv.org/abs/2606.14447" target="_blank"
+                                class="hover:underline decoration-white/30 underline-offset-4">Dealing with locality in
+                                QAOA</a></h3>
+                        <div
+                            class="font-data-mono text-xs text-on-surface-variant mb-6 flex flex-wrap gap-4 opacity-70 items-center">
                             <span>Submitted to Quantum</span>
                             <span class="text-white/20">|</span>
                             <span>Jun 2026</span>
                             <span class="text-white/20">|</span>
-                            <span>DOI: <a href="https://doi.org/10.48550/arXiv.2606.14447" target="_blank" class="hover:text-primary transition-colors hover:underline">10.48550/arXiv.2606.14447</a></span>
+                            <span>DOI: <a href="https://doi.org/10.48550/arXiv.2606.14447" target="_blank"
+                                    class="hover:text-primary transition-colors hover:underline">10.48550/arXiv.2606.14447</a></span>
                             <span class="text-white/20">|</span>
-                            <span>arXiv: <a href="https://arxiv.org/abs/2606.14447" target="_blank" class="hover:text-primary transition-colors hover:underline">2606.14447</a></span>
+                            <span>arXiv: <a href="https://arxiv.org/abs/2606.14447" target="_blank"
+                                    class="hover:text-primary transition-colors hover:underline">2606.14447</a></span>
                         </div>
                         <p class="font-body-reading text-lg text-on-surface-variant/90 leading-relaxed mb-4">
-                            Proposed a transport-augmented QAOA enriching the mixer with optimized shortcut couplings to collapse effective interaction-graph diameter. Connected optimal shortcut placement to bounded-diameter graph augmentation via exact finite-depth support recursions.
+                            Proposed a transport-augmented QAOA enriching the mixer with optimized shortcut couplings to
+                            collapse effective interaction-graph diameter. Connected optimal shortcut placement to
+                            bounded-diameter graph augmentation via exact finite-depth support recursions.
                         </p>
                         <div class="font-data-mono text-xs text-krea-accent/80 tracking-wide mt-4">
                             > Co-authors: Kumar, M.*, Tahir, Y.* (*Equal contribution)
@@ -276,55 +377,87 @@
                     </article>
 
                     <!-- Paper 2 -->
-                    <article class="group relative border-l border-white/10 pl-6 md:pl-10 hover:border-highlight-amber/50 transition-colors duration-500">
-                        <div class="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-surface-container border border-white/20 group-hover:bg-highlight-amber transition-colors"></div>
-                        <h3 class="font-headline-md text-2xl md:text-3xl text-primary mb-3"><a href="https://arxiv.org/abs/2604.27015" target="_blank" class="hover:underline decoration-white/30 underline-offset-4">Congestion-free routing on quantum chips</a></h3>
-                        <div class="font-data-mono text-xs text-on-surface-variant mb-6 flex flex-wrap gap-4 opacity-70 items-center">
+                    <article
+                        class="group relative border-l border-white/10 pl-6 md:pl-10 hover:border-highlight-amber/50 transition-colors duration-500">
+                        <div
+                            class="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-surface-container border border-white/20 group-hover:bg-highlight-amber transition-colors">
+                        </div>
+                        <h3 class="font-headline-md text-2xl md:text-3xl text-primary mb-3"><a
+                                href="https://arxiv.org/abs/2604.27015" target="_blank"
+                                class="hover:underline decoration-white/30 underline-offset-4">Congestion-free routing
+                                on quantum chips</a></h3>
+                        <div
+                            class="font-data-mono text-xs text-on-surface-variant mb-6 flex flex-wrap gap-4 opacity-70 items-center">
                             <span>Physical Review A (under review)</span>
                             <span class="text-white/20">|</span>
                             <span>Apr 2026</span>
                             <span class="text-white/20">|</span>
-                            <span>DOI: <a href="https://doi.org/10.48550/arXiv.2604.27015" target="_blank" class="hover:text-primary transition-colors hover:underline">10.48550/arXiv.2604.27015</a></span>
+                            <span>DOI: <a href="https://doi.org/10.48550/arXiv.2604.27015" target="_blank"
+                                    class="hover:text-primary transition-colors hover:underline">10.48550/arXiv.2604.27015</a></span>
                             <span class="text-white/20">|</span>
-                            <span>arXiv: <a href="https://arxiv.org/abs/2604.27015" target="_blank" class="hover:text-primary transition-colors hover:underline">2604.27015</a></span>
+                            <span>arXiv: <a href="https://arxiv.org/abs/2604.27015" target="_blank"
+                                    class="hover:text-primary transition-colors hover:underline">2604.27015</a></span>
                         </div>
                         <p class="font-body-reading text-lg text-on-surface-variant/90 leading-relaxed mb-4">
-                            Designed a swap-free routing framework using orthogonal spectral buses to transport control information without moving the computational state. Proved decodability, reversibility, and correctness for CNOT and Boolean fan-in operations, supported by Cirq and QuTiP simulations.
+                            Designed a swap-free routing framework using orthogonal spectral buses to transport control
+                            information without moving the computational state. Proved decodability, reversibility, and
+                            correctness for CNOT and Boolean fan-in operations, supported by Cirq and QuTiP simulations.
                         </p>
                         <div class="font-data-mono text-xs text-krea-accent/80 tracking-wide mt-4">
                             > Led research formulation, mathematical proofs, and Cirq/QuTiP simulations.
                         </div>
                     </article>
-                    
+
                     <!-- Paper 3 -->
-                    <article class="group relative border-l border-white/10 pl-6 md:pl-10 hover:border-highlight-amber/50 transition-colors duration-500">
-                        <div class="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-surface-container border border-white/20 group-hover:bg-highlight-amber transition-colors"></div>
-                        <h3 class="font-headline-md text-2xl md:text-3xl text-primary mb-3"><a href="https://github.com/QuantumAmplification/ampamp" target="_blank" class="hover:underline decoration-white/30 underline-offset-4">ampamp: Python Library for Amplitude Amplification</a></h3>
-                        <div class="font-data-mono text-xs text-on-surface-variant mb-6 flex flex-wrap gap-4 opacity-70 items-center">
+                    <article
+                        class="group relative border-l border-white/10 pl-6 md:pl-10 hover:border-highlight-amber/50 transition-colors duration-500">
+                        <div
+                            class="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-surface-container border border-white/20 group-hover:bg-highlight-amber transition-colors">
+                        </div>
+                        <h3 class="font-headline-md text-2xl md:text-3xl text-primary mb-3"><a
+                                href="https://github.com/QuantumAmplification/ampamp" target="_blank"
+                                class="hover:underline decoration-white/30 underline-offset-4">ampamp: Python Library
+                                for Amplitude Amplification</a></h3>
+                        <div
+                            class="font-data-mono text-xs text-on-surface-variant mb-6 flex flex-wrap gap-4 opacity-70 items-center">
                             <span>Submitted to SciPost Physics Codebases</span>
                             <span class="text-white/20">|</span>
                             <span>May 2026</span>
                             <span class="text-white/20">|</span>
-                            <span><a href="https://github.com/QuantumAmplification/ampamp" target="_blank" class="hover:text-primary transition-colors hover:underline">GitHub Repository</a></span>
+                            <span><a href="https://github.com/QuantumAmplification/ampamp" target="_blank"
+                                    class="hover:text-primary transition-colors hover:underline">GitHub
+                                    Repository</a></span>
                         </div>
                         <p class="font-body-reading text-lg text-on-surface-variant/90 leading-relaxed mb-4">
-                            Presented a Python library for quantum amplitude amplification, QSVT, and circuit-analysis workflows. Provided engines for Grover search, fixed-point and oblivious amplification, distributed partitioning, and polynomial synthesis.
+                            Presented a Python library for quantum amplitude amplification, QSVT, and circuit-analysis
+                            workflows. Provided engines for Grover search, fixed-point and oblivious amplification,
+                            distributed partitioning, and polynomial synthesis.
                         </p>
                     </article>
-                    
+
                     <!-- Paper 4 -->
-                    <article class="group relative border-l border-white/10 pl-6 md:pl-10 hover:border-highlight-amber/50 transition-colors duration-500">
-                        <div class="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-surface-container border border-white/20 group-hover:bg-highlight-amber transition-colors"></div>
-                        <h3 class="font-headline-md text-2xl md:text-3xl text-primary mb-3"><a href="https://doi.org/10.5281/zenodo.20054981" target="_blank" class="hover:underline decoration-white/30 underline-offset-4">Amplitude Amplification Algorithms</a></h3>
-                        <div class="font-data-mono text-xs text-on-surface-variant mb-6 flex flex-wrap gap-4 opacity-70 items-center">
+                    <article
+                        class="group relative border-l border-white/10 pl-6 md:pl-10 hover:border-highlight-amber/50 transition-colors duration-500">
+                        <div
+                            class="absolute -left-[5px] top-2 w-[9px] h-[9px] rounded-full bg-surface-container border border-white/20 group-hover:bg-highlight-amber transition-colors">
+                        </div>
+                        <h3 class="font-headline-md text-2xl md:text-3xl text-primary mb-3"><a
+                                href="https://doi.org/10.5281/zenodo.20054981" target="_blank"
+                                class="hover:underline decoration-white/30 underline-offset-4">Amplitude Amplification
+                                Algorithms</a></h3>
+                        <div
+                            class="font-data-mono text-xs text-on-surface-variant mb-6 flex flex-wrap gap-4 opacity-70 items-center">
                             <span>Editorial inquiry to PRX Quantum & npj Quantum Information</span>
                             <span class="text-white/20">|</span>
                             <span>May 2026</span>
                             <span class="text-white/20">|</span>
-                            <span>DOI: <a href="https://doi.org/10.5281/zenodo.20054981" target="_blank" class="hover:text-primary transition-colors hover:underline">10.5281/zenodo.20054981</a></span>
+                            <span>DOI: <a href="https://doi.org/10.5281/zenodo.20054981" target="_blank"
+                                    class="hover:text-primary transition-colors hover:underline">10.5281/zenodo.20054981</a></span>
                         </div>
                         <p class="font-body-reading text-lg text-on-surface-variant/90 leading-relaxed mb-4">
-                            Formulated a unified mathematical formalism tracing quantum amplitude amplification from Grover's algorithm to the Quantum Singular Value Transformation (QSVT) framework. Introduced a variational template for amplitude amplification based on parameterized phase rotations.
+                            Formulated a unified mathematical formalism tracing quantum amplitude amplification from
+                            Grover's algorithm to the Quantum Singular Value Transformation (QSVT) framework. Introduced
+                            a variational template for amplitude amplification based on parameterized phase rotations.
                         </p>
                     </article>
                 </div>
@@ -338,54 +471,75 @@
                     <span class="material-symbols-outlined text-krea-accent">account_tree</span>
                     <div class="font-data-mono text-[11px] tracking-widest text-krea-accent">NODE_02</div>
                 </div>
-                <h2 class="font-headline-md text-4xl md:text-5xl text-primary mb-12 tracking-wide">NODE_02: ENGINEERING & PROJECTS</h2>
-                
+                <h2 class="font-headline-md text-4xl md:text-5xl text-primary mb-12 tracking-wide">NODE_02: ENGINEERING
+                    & PROJECTS</h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Project 1 -->
-                    <a href="https://github.com/QCOREbeta/engine" target="_blank" class="block bg-surface-container/40 p-8 rounded-xl border border-white/5 hover:bg-surface-container/80 hover:border-white/20 transition-all duration-300 group backdrop-blur-sm">
+                    <a href="https://github.com/QCOREbeta/engine" target="_blank"
+                        class="block bg-surface-container/40 p-8 rounded-xl border border-white/5 hover:bg-surface-container/80 hover:border-white/20 transition-all duration-300 group backdrop-blur-sm">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="font-data-mono text-xl text-primary">QCore</h3>
-                            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
                         </div>
-                        <div class="font-data-mono text-xs text-krea-accent mb-4 tracking-wide">Quantum-Classical Compiler Engine</div>
+                        <div class="font-data-mono text-xs text-krea-accent mb-4 tracking-wide">Quantum-Classical
+                            Compiler Engine</div>
                         <p class="font-body-reading text-[16px] text-on-surface-variant/80 leading-relaxed">
-                            Independently developing a backend-agnostic quantum compiler. Built a Rust-based frontend featuring real intermediate representation (IR), kernel decomposition, replay tracing, and a verification-heavy CPU-first execution pipeline.
+                            Independently developing a backend-agnostic quantum compiler. Built a Rust-based frontend
+                            featuring real intermediate representation (IR), kernel decomposition, replay tracing, and a
+                            verification-heavy CPU-first execution pipeline.
                         </p>
                     </a>
 
                     <!-- Project 2 -->
-                    <a href="https://quantumamplification.github.io/ampamp/" target="_blank" class="block bg-surface-container/40 p-8 rounded-xl border border-white/5 hover:bg-surface-container/80 hover:border-white/20 transition-all duration-300 group backdrop-blur-sm">
+                    <a href="https://quantumamplification.github.io/ampamp/" target="_blank"
+                        class="block bg-surface-container/40 p-8 rounded-xl border border-white/5 hover:bg-surface-container/80 hover:border-white/20 transition-all duration-300 group backdrop-blur-sm">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="font-data-mono text-xl text-primary">ampamp</h3>
-                            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
                         </div>
-                        <div class="font-data-mono text-xs text-krea-accent mb-4 tracking-wide">Amplitude Amplification Tooling</div>
+                        <div class="font-data-mono text-xs text-krea-accent mb-4 tracking-wide">Amplitude Amplification
+                            Tooling</div>
                         <p class="font-body-reading text-[16px] text-on-surface-variant/80 leading-relaxed">
-                            Co-authored a Python library to build, inspect, profile, and validate quantum workflows. Packaged Grover search, fixed-point schedules, and QSVT/QSP helpers behind a compact research API.
+                            Co-authored a Python library to build, inspect, profile, and validate quantum workflows.
+                            Packaged Grover search, fixed-point schedules, and QSVT/QSP helpers behind a compact
+                            research API.
                         </p>
                     </a>
 
                     <!-- Project 3 -->
-                    <a href="https://github.com/heyitsshoz/ratemyprof/tree/main/RateMyProfKrea" target="_blank" class="block bg-surface-container/40 p-8 rounded-xl border border-white/5 hover:bg-surface-container/80 hover:border-white/20 transition-all duration-300 group backdrop-blur-sm">
+                    <a href="https://github.com/heyitsshoz/ratemyprof/tree/main/RateMyProfKrea" target="_blank"
+                        class="block bg-surface-container/40 p-8 rounded-xl border border-white/5 hover:bg-surface-container/80 hover:border-white/20 transition-all duration-300 group backdrop-blur-sm">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="font-data-mono text-xl text-primary">RateMyProf Krea</h3>
-                            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
                         </div>
-                        <div class="font-data-mono text-xs text-krea-accent mb-4 tracking-wide">Full-Stack Web Application</div>
+                        <div class="font-data-mono text-xs text-krea-accent mb-4 tracking-wide">Full-Stack Web
+                            Application</div>
                         <p class="font-body-reading text-[16px] text-on-surface-variant/80 leading-relaxed">
-                            Developing a centralized student review platform using Next.js, Express.js, and Supabase. Features real-time aggregated analytics, secure Google OAuth, and an administrative moderation panel.
+                            Developing a centralized student review platform using Next.js, Express.js, and Supabase.
+                            Features real-time aggregated analytics, secure Google OAuth, and an administrative
+                            moderation panel.
                         </p>
                     </a>
 
                     <!-- Project 4 -->
-                    <a href="https://github.com/heyitsshoz/krea-parcel-scanner" target="_blank" class="block bg-surface-container/40 p-8 rounded-xl border border-white/5 hover:bg-surface-container/80 hover:border-white/20 transition-all duration-300 group backdrop-blur-sm">
+                    <a href="https://github.com/heyitsshoz/krea-parcel-scanner" target="_blank"
+                        class="block bg-surface-container/40 p-8 rounded-xl border border-white/5 hover:bg-surface-container/80 hover:border-white/20 transition-all duration-300 group backdrop-blur-sm">
                         <div class="flex justify-between items-start mb-4">
                             <h3 class="font-data-mono text-xl text-primary">Krea Parcel Scanner</h3>
-                            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
                         </div>
-                        <div class="font-data-mono text-xs text-krea-accent mb-4 tracking-wide">Real-time Management System</div>
+                        <div class="font-data-mono text-xs text-krea-accent mb-4 tracking-wide">Real-time Management
+                            System</div>
                         <p class="font-body-reading text-[16px] text-on-surface-variant/80 leading-relaxed">
-                            Digitizing campus security workflows by engineering a real-time parcel management system using Firebase. Integrates QR code scanning and OCR-based name extraction to automate delivery processing.
+                            Digitizing campus security workflows by engineering a real-time parcel management system
+                            using Firebase. Integrates QR code scanning and OCR-based name extraction to automate
+                            delivery processing.
                         </p>
                     </a>
                 </div>
@@ -394,48 +548,62 @@
 
         <!-- Node 03 Section -->
         <section class="px-margin-safe py-16 flex flex-col justify-start relative z-20" id="node-03">
-            <div class="max-w-4xl mx-auto w-full content-block bg-background/60 backdrop-blur-xl p-10 md:p-16 rounded-2xl border border-white/5 shadow-2xl">
+            <div
+                class="max-w-4xl mx-auto w-full content-block bg-background/60 backdrop-blur-xl p-10 md:p-16 rounded-2xl border border-white/5 shadow-2xl">
                 <div class="flex items-center gap-4 mb-8">
                     <span class="material-symbols-outlined text-primary/60">category</span>
                     <div class="font-data-mono text-[11px] tracking-widest text-primary/60">NODE_03</div>
                 </div>
-                <h2 class="font-headline-md text-4xl md:text-5xl text-primary mb-12 tracking-wide border-b border-white/10 pb-8">NODE_03: ACADEMIA & SKILLS</h2>
-                
+                <h2
+                    class="font-headline-md text-4xl md:text-5xl text-primary mb-12 tracking-wide border-b border-white/10 pb-8">
+                    NODE_03: ACADEMIA & SKILLS</h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
                     <div class="space-y-12">
                         <div>
-                            <h3 class="font-data-mono text-lg text-primary mb-6 tracking-widest uppercase border-l-2 border-krea-accent pl-4">Education</h3>
+                            <h3
+                                class="font-data-mono text-lg text-primary mb-6 tracking-widest uppercase border-l-2 border-krea-accent pl-4">
+                                Education</h3>
                             <div class="space-y-6">
                                 <div>
                                     <div class="font-headline-md text-2xl text-primary mb-1">Krea University</div>
-                                    <div class="font-data-mono text-xs text-on-surface-variant opacity-70 mb-2">2025 – 2029 (Expected)</div>
+                                    <div class="font-data-mono text-xs text-on-surface-variant opacity-70 mb-2">2025 –
+                                        2029 (Expected)</div>
                                     <p class="font-body-reading text-lg text-on-surface-variant/90 leading-relaxed">
                                         Double Major: Computer Science and Mathematics.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div>
-                            <h3 class="font-data-mono text-lg text-primary mb-6 tracking-widest uppercase border-l-2 border-krea-accent pl-4">Work Experience</h3>
+                            <h3
+                                class="font-data-mono text-lg text-primary mb-6 tracking-widest uppercase border-l-2 border-krea-accent pl-4">
+                                Work Experience</h3>
                             <div class="space-y-6">
                                 <div>
-                                    <div class="font-headline-md text-2xl text-primary mb-1">Undergraduate Researcher</div>
-                                    <div class="font-data-mono text-xs text-on-surface-variant opacity-70 mb-2">Feb 2026 – Present | Krea University</div>
+                                    <div class="font-headline-md text-2xl text-primary mb-1">Undergraduate Researcher
+                                    </div>
+                                    <div class="font-data-mono text-xs text-on-surface-variant opacity-70 mb-2">Feb 2026
+                                        – Present | Krea University</div>
                                     <p class="font-body-reading text-lg text-on-surface-variant/90 leading-relaxed">
-                                        Under Prof. Mithilesh Kumar. Conducting research in quantum algorithms, routing, amplitude amplification, and variational computing.
+                                        Under Prof. Mithilesh Kumar. Conducting research in quantum algorithms, routing,
+                                        amplitude amplification, and variational computing.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div>
-                        <h3 class="font-data-mono text-lg text-primary mb-6 tracking-widest uppercase border-l-2 border-highlight-amber pl-4">Technical Repertoire</h3>
+                        <h3
+                            class="font-data-mono text-lg text-primary mb-6 tracking-widest uppercase border-l-2 border-highlight-amber pl-4">
+                            Technical Repertoire</h3>
                         <div class="space-y-4">
                             <div>
                                 <div class="font-data-mono text-sm text-primary mb-1">Programming Languages</div>
-                                <p class="font-body-reading text-lg text-on-surface-variant/80">C++ (Advanced), Python (Advanced), Rust (Proficient)</p>
+                                <p class="font-body-reading text-lg text-on-surface-variant/80">C++ (Advanced), Python
+                                    (Advanced), Rust (Proficient)</p>
                             </div>
                             <div>
                                 <div class="font-data-mono text-sm text-primary mb-1">Quantum Tools</div>
@@ -443,7 +611,8 @@
                             </div>
                             <div>
                                 <div class="font-data-mono text-sm text-primary mb-1">Frameworks & Libraries</div>
-                                <p class="font-body-reading text-lg text-on-surface-variant/80">PyTorch, TensorFlow, NumPy, Pandas, Next.js</p>
+                                <p class="font-body-reading text-lg text-on-surface-variant/80">PyTorch, TensorFlow,
+                                    NumPy, Pandas, Next.js</p>
                             </div>
                         </div>
                     </div>
@@ -453,16 +622,23 @@
     </main>
 
     <!-- Footer -->
-    <footer class="relative w-full flex flex-col md:flex-row justify-between items-center px-margin-safe py-16 z-10 opacity-0 transition-opacity duration-1000 bg-surface-container-lowest border-t border-white/5" id="site-footer">
+    <footer
+        class="relative w-full flex flex-col md:flex-row justify-between items-center px-margin-safe py-16 z-10 opacity-0 transition-opacity duration-1000 bg-surface-container-lowest border-t border-white/5"
+        id="site-footer">
         <div class="font-data-mono text-xs text-on-surface-variant opacity-50 mb-6 md:mb-0">
-            ©2026 YUSUF TAHIR — LEDGER
+            © 2026 YUSUF TAHIR
         </div>
         <nav class="flex gap-8 flex-wrap justify-center">
-            <a class="font-data-mono text-xs tracking-widest text-on-surface-variant opacity-50 hover:text-primary transition-colors" href="https://github.com/heyitsshoz" target="_blank">GITHUB</a>
-            <a class="font-data-mono text-xs tracking-widest text-on-surface-variant opacity-50 hover:text-primary transition-colors" href="https://scholar.google.com/citations?hl=en&user=Ff4yDuoAAAAJ" target="_blank">SCHOLAR</a>
-            <a class="font-data-mono text-xs tracking-widest text-on-surface-variant opacity-50 hover:text-primary transition-colors" href="https://linkedin.com/in/yusuftahir" target="_blank">LINKEDIN</a>
-            <a class="font-data-mono text-xs tracking-widest text-on-surface-variant opacity-50 hover:text-primary transition-colors" href="mailto:yusuf_tahir.sias25@krea.ac.in">CONTACT</a>
-            <a class="font-data-mono text-xs tracking-widest text-on-surface-variant opacity-50 hover:text-primary transition-colors" href="cv.pdf" target="_blank">CV</a>
+            <a class="font-data-mono text-xs tracking-widest text-on-surface-variant opacity-50 hover:text-primary transition-colors"
+                href="mailto:yusuf_tahir.sias25@krea.ac.in">CONTACT</a>
+            <a class="font-data-mono text-xs tracking-widest text-on-surface-variant opacity-50 hover:text-primary transition-colors"
+                href="https://scholar.google.com/citations?hl=en&user=Ff4yDuoAAAAJ" target="_blank">SCHOLAR</a>
+            <a class="font-data-mono text-xs tracking-widest text-on-surface-variant opacity-50 hover:text-primary transition-colors"
+                href="https://github.com/heyitsshoz" target="_blank">GITHUB</a>
+            <a class="font-data-mono text-xs tracking-widest text-on-surface-variant opacity-50 hover:text-primary transition-colors"
+                href="https://linkedin.com/in/yusuftahir" target="_blank">LINKEDIN</a>
+            <a class="font-data-mono text-xs tracking-widest text-on-surface-variant opacity-50 hover:text-primary transition-colors"
+                href="cv.pdf" target="_blank">CV</a>
         </nav>
     </footer>
 
@@ -488,10 +664,10 @@
         // Scrollspy for sidebar
         const sections = document.querySelectorAll('section[id^="node-"]');
         const navLinks = document.querySelectorAll('aside nav a[href^="#node-"]');
-        
+
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
-            
+
             // Scrollspy logic
             let current = '';
             sections.forEach(section => {
@@ -505,14 +681,14 @@
                 // reset to inactive
                 link.classList.remove('text-primary', "before:content-['>']", 'before:mr-2');
                 link.classList.add('text-on-surface-variant', 'opacity-30', 'hover:opacity-100');
-                
+
                 // set active if matches
                 if (current && link.getAttribute('href') === `#${current}`) {
                     link.classList.remove('text-on-surface-variant', 'opacity-30', 'hover:opacity-100');
                     link.classList.add('text-primary', "before:content-['>']", 'before:mr-2');
                 }
             });
-            
+
             // 1. Header Visibility
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
                 topNav.style.opacity = '0';
@@ -554,70 +730,71 @@
         function getWarpedCoordinates(x, y, noise, scrollVelocity) {
             let warpedX = x;
             let warpedY = y + noise;
-            
-            const dx = mouseX - warpedX;
-            const dy = mouseY - warpedY;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            
-            let effectRadius = Math.max(width, height) * 0.3;
-            let pullStrengthBase = 120;
-            
-            if (dist < effectRadius && dist > 0) {
-                const normalizedDist = dist / effectRadius;
-                const pullStrength = Math.pow(1 - normalizedDist, 3) * pullStrengthBase;
-                const safePull = Math.min(pullStrength, dist - 5);
-                
-                if (safePull > 0) {
-                    warpedX += (dx / dist) * safePull;
-                    warpedY += (dy / dist) * safePull;
-                }
-            }
-            
+
             if (currentScroll > 10) {
                 const distToTop = Math.max(1, warpedY);
                 const updraftBase = (currentScroll * 0.2) + (scrollVelocity * 2);
                 const updraft = Math.min(300, updraftBase * (height / (distToTop * 2)));
                 warpedY -= updraft;
-                
+
                 const centerPull = (width / 2 - warpedX) * (updraft / height) * 0.5;
                 warpedX += centerPull;
+            }
+
+            const dx = mouseX - warpedX;
+            const dy = mouseY - warpedY;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            let effectRadius = Math.max(width, height) * 0.3;
+            let pullStrengthBase = 120;
+
+            if (dist < effectRadius && dist > 0) {
+                const normalizedDist = dist / effectRadius;
+                const pullStrength = Math.pow(1 - normalizedDist, 3) * pullStrengthBase;
+                const safePull = Math.min(pullStrength, dist - 5);
+
+                if (safePull > 0) {
+                    warpedX += (dx / dist) * safePull;
+                    warpedY += (dy / dist) * safePull;
+                }
             }
 
             return { x: warpedX, y: warpedY };
         }
 
         function animate() {
-            mouseX += (targetMouseX - mouseX) * 0.05;
-            mouseY += (targetMouseY - mouseY) * 0.05;
-            
+            // Increased from 0.05 to 0.4 to remove tracking lag while keeping micro-smoothness
+            mouseX += (targetMouseX - mouseX) * 0.4;
+            mouseY += (targetMouseY - mouseY) * 0.4;
+
             targetScroll = window.scrollY;
             const scrollDiff = targetScroll - currentScroll;
-            currentScroll += scrollDiff * 0.1; 
+            currentScroll += scrollDiff * 0.1;
             const scrollVelocity = Math.abs(scrollDiff);
             const scrollDepth = currentScroll / (document.body.offsetHeight - window.innerHeight || 1);
 
             ctx.fillStyle = 'rgba(20, 19, 19, 0.2)';
             ctx.fillRect(0, 0, width, height);
 
-            time += 0.002 + (scrollVelocity * 0.0001); 
+            time += 0.002 + (scrollVelocity * 0.0001);
             time += scrollDepth * 0.005;
 
             ctx.lineWidth = 1;
-            
+
             let strokeColor = 'rgba(255, 255, 255, 0.08)';
-            let spacing = 40;
-            let amplitude = 30;
+            let spacing = window.innerWidth < 768 ? 60 : 40;
+            let amplitude = window.innerWidth < 768 ? 10 : 30;
             let phaseFreq = 0.005;
-            
+
             if (scrollDepth > 0.2 && scrollDepth < 0.5) {
-                spacing = 50;
-                strokeColor = 'rgba(141, 153, 174, 0.15)'; 
-                amplitude = 15; 
+                spacing = window.innerWidth < 768 ? 70 : 50;
+                strokeColor = 'rgba(141, 153, 174, 0.15)';
+                amplitude = window.innerWidth < 768 ? 5 : 15;
             } else if (scrollDepth >= 0.5) {
-                spacing = 60 + (scrollDepth * 20); 
-                strokeColor = `rgba(229, 181, 103, ${0.05 + scrollDepth * 0.05})`; 
-                phaseFreq = 0.01 + (scrollDepth * 0.01); 
-                amplitude = 40 + (Math.sin(time*2)*20); 
+                spacing = (window.innerWidth < 768 ? 80 : 60) + (scrollDepth * 20);
+                strokeColor = `rgba(229, 181, 103, ${0.05 + scrollDepth * 0.05})`;
+                phaseFreq = 0.01 + (scrollDepth * 0.01);
+                amplitude = (window.innerWidth < 768 ? 15 : 40) + (Math.sin(time * 2) * 20);
             }
 
             const rows = Math.floor(height / spacing) + 2;
@@ -629,10 +806,10 @@
                 for (let x = 0; x < cols; x++) {
                     const px = x * spacing;
                     const py = (y * spacing) - (currentScroll * 0.2) % spacing;
-                    
-                    const noise = Math.sin(px * phaseFreq + time) * 
-                                  Math.cos(py * phaseFreq - time * 0.8) * amplitude;
-                    
+
+                    const noise = Math.sin(px * phaseFreq + time) *
+                        Math.cos(py * phaseFreq - time * 0.8) * amplitude;
+
                     const pt = getWarpedCoordinates(px, py, noise, scrollVelocity);
 
                     if (x === 0) {
@@ -640,26 +817,26 @@
                     } else {
                         const prevX = (x - 1) * spacing;
                         const prevPy = py;
-                        const prevNoise = Math.sin(prevX * phaseFreq + time) * 
-                                          Math.cos(prevPy * phaseFreq - time * 0.8) * amplitude;
-                        
+                        const prevNoise = Math.sin(prevX * phaseFreq + time) *
+                            Math.cos(prevPy * phaseFreq - time * 0.8) * amplitude;
+
                         const prevPt = getWarpedCoordinates(prevX, prevPy, prevNoise, scrollVelocity);
-                        
+
                         const cpX = (prevPt.x + pt.x) / 2;
                         const cpY = (prevPt.y + pt.y) / 2;
                         ctx.quadraticCurveTo(prevPt.x, prevPt.y, cpX, cpY);
-                        
+
                         if (x === cols - 1) {
-                             ctx.lineTo(pt.x, pt.y);
+                            ctx.lineTo(pt.x, pt.y);
                         }
                     }
-                    
+
                     const dx = mouseX - pt.x;
                     const dy = mouseY - pt.y;
                     const distToMouse = Math.sqrt(dx * dx + dy * dy);
-                    
-                    const sparkChance = (scrollVelocity > 2 || pt.y < height*0.2) ? 0.995 : 0.999;
-                    
+
+                    const sparkChance = (scrollVelocity > 2 || pt.y < height * 0.2) ? 0.995 : 0.999;
+
                     if (Math.random() > sparkChance || (distToMouse < 150 && Math.random() > 0.95)) {
                         ctx.fillStyle = scrollDepth > 0.5 ? 'rgba(255, 255, 255, 0.15)' : 'rgba(229, 181, 103, 0.15)';
                         ctx.beginPath();
@@ -679,6 +856,28 @@
             targetMouseX = e.clientX;
             targetMouseY = e.clientY;
         });
+        window.addEventListener('touchmove', (e) => {
+            targetMouseX = e.touches[0].clientX;
+            targetMouseY = e.touches[0].clientY;
+        }, { passive: true });
+        window.addEventListener('mouseout', () => { targetMouseX = window.innerWidth / 2; targetMouseY = window.innerHeight / 2; });
+        window.addEventListener('touchend', () => { targetMouseX = window.innerWidth / 2; targetMouseY = window.innerHeight / 2; });
+
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const bar1 = document.getElementById('bar1'), bar2 = document.getElementById('bar2'), bar3 = document.getElementById('bar3');
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                bar1.style.transform = isOpen ? 'translateY(6px) rotate(45deg)' : '';
+                bar2.style.opacity = isOpen ? '0' : '1';
+                bar3.style.transform = isOpen ? 'translateY(-6px) rotate(-45deg)' : '';
+                bar3.style.width = isOpen ? '1.5rem' : '1rem';
+            });
+            document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+        }
 
         // Auto-sync system time
         const sysTimeElement = document.getElementById('sys-time');
@@ -700,4 +899,5 @@
         animate();
     </script>
 </body>
+
 </html>

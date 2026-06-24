@@ -1,69 +1,130 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>PHYSICS - YUSUF TAHIR</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" />
     <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "surface-container-lowest": "#0e0e0e",
-                "background": "#141313",
-                "on-background": "#e5e2e1",
-                "primary": "#ffffff",
-                "on-surface-variant": "#c4c7c8",
-                "krea-accent": "#8d99ae",
-                "highlight-amber": "#e5b567",
-            },
-            "spacing": { "margin-safe": "12vw" },
-            "fontFamily": {
-                "display-lg": ["Bodoni Moda"],
-                "data-mono": ["JetBrains Mono"],
-                "body-reading": ["Bodoni Moda"],
-                "headline-md": ["Bodoni Moda"]
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#0e0e0e",
+                        "background": "#141313",
+                        "on-background": "#e5e2e1",
+                        "primary": "#ffffff",
+                        "on-surface-variant": "#c4c7c8",
+                        "krea-accent": "#8d99ae",
+                        "highlight-amber": "#e5b567",
+                    },
+                    "spacing": { "margin-safe": "12vw" },
+                    "fontFamily": {
+                        "display-lg": ["Bodoni Moda"],
+                        "data-mono": ["JetBrains Mono"],
+                        "body-reading": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"]
+                    }
+                }
             }
-          }
         }
-      }
     </script>
     <style>
-        body { background-color: #141313; color: #e5e2e1; }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #141313; }
-        ::-webkit-scrollbar-thumb { background: #353434; border-radius: 3px; }
+        body {
+            background-color: #141313;
+            color: #e5e2e1;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #141313;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #353434;
+            border-radius: 3px;
+        }
+
+        #mobile-menu {
+            display: none; position: fixed; inset: 0; z-index: 49;
+            background: rgba(20,19,19,0.97); backdrop-filter: blur(20px);
+            flex-direction: column; justify-content: center; align-items: center; gap: 2.5rem;
+        }
+        #mobile-menu.open { display: flex; }
+        #hamburger { display: none; }
+        
+        @media (max-width: 767px) {
+            #hamburger { display: flex; }
+            .px-margin-safe { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+            h1 { font-size: 3rem !important; line-height: 1.1 !important; }
+            main { padding-top: 14vh !important; }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .px-margin-safe { padding-left: 4vw !important; padding-right: 4vw !important; }
+        }
     </style>
 </head>
-<body class="bg-background text-on-background antialiased min-h-screen flex flex-col relative selection:bg-surface-variant selection:text-primary">
+
+<body
+    class="bg-background text-on-background antialiased min-h-screen flex flex-col relative selection:bg-surface-variant selection:text-primary">
 
     <!-- Dynamic Background -->
     <div class="fixed inset-0 w-full h-full z-0 overflow-hidden bg-background pointer-events-none">
         <canvas id="quantum-canvas" class="w-full h-full opacity-60 mix-blend-screen"></canvas>
-        <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background"></div>
-        <!-- Cinematic Vignette -->
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#141313_100%)] opacity-80 mix-blend-multiply pointer-events-none"></div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+        <a href="index.html" class="font-display-lg text-3xl text-primary tracking-tighter border-b border-primary pb-1">Y. TAHIR</a>
+        <nav class="flex flex-col items-center gap-6 mt-4">
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-primary border-b border-primary pb-1" href="physics.html">PHYSICS</a>
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-60" href="cs.html">COMPUTER SCIENCE</a>
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-60" href="mathematics.html">MATHEMATICS</a>
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-60" href="prose.html">PROSE</a>
+            <a class="font-data-mono text-sm uppercase tracking-[0.2em] text-krea-accent mt-4" href="cv.pdf" target="_blank">VIEW CV &nearr;</a>
+        </nav>
+        <a href="index.html" class="font-data-mono text-xs text-on-surface-variant opacity-40 mt-6">&larr; BACK TO LEDGER</a>
     </div>
 
     <!-- TopAppBar -->
-    <header class="fixed top-0 w-full z-50 flex justify-between items-end px-margin-safe pt-8 pb-4 transition-all duration-700 bg-transparent" id="top-nav">
+    <header
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-safe pt-6 pb-4 transition-all duration-700 bg-transparent"
+        id="top-nav">
         <div class="flex items-center gap-8">
-            <a href="index.html" class="font-display-lg text-2xl md:text-3xl text-primary tracking-tighter hover:opacity-70 transition-opacity">Y. TAHIR</a>
+            <a href="index.html"
+                class="font-display-lg text-xl md:text-3xl text-primary tracking-tighter hover:opacity-70 transition-opacity">Y.
+                TAHIR</a>
             <nav class="hidden md:flex gap-8 items-end pb-1">
-                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-primary border-b border-primary pb-1 hover:tracking-widest transition-all duration-700 ease-in-out" href="physics.html">PHYSICS</a>
-                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out" href="cs.html">COMPUTER SCIENCE</a>
-                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out" href="mathematics.html">MATHEMATICS</a>
-                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out" href="prose.html">PROSE</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-primary border-b border-primary pb-1 hover:tracking-widest transition-all duration-700 ease-in-out"
+                    href="physics.html">PHYSICS</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out"
+                    href="cs.html">COMPUTER SCIENCE</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out"
+                    href="mathematics.html">MATHEMATICS</a>
+                <a class="font-data-mono text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40 hover:opacity-100 transition-opacity duration-500 hover:tracking-widest transition-all duration-700 ease-in-out"
+                    href="prose.html">PROSE</a>
             </nav>
         </div>
-        <div class="flex items-center gap-6 font-data-mono text-xs">
-            <a href="index.html" class="text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity hidden md:block"><- BACK TO LEDGER</a>
+        <div class="flex items-center gap-4">
+            <a href="index.html" class="font-data-mono text-xs text-on-surface-variant opacity-60 hover:opacity-100 transition-opacity hidden md:block">&larr; BACK TO LEDGER</a>
+            <button id="hamburger" class="flex flex-col gap-1.5 p-2 z-50" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="block w-6 h-px bg-primary transition-all duration-300" id="bar1"></span>
+                <span class="block w-6 h-px bg-primary transition-all duration-300" id="bar2"></span>
+                <span class="block w-4 h-px bg-primary transition-all duration-300" id="bar3"></span>
+            </button>
         </div>
     </header>
 
@@ -74,8 +135,10 @@
                 <span class="material-symbols-outlined text-highlight-amber">stream</span>
                 <div class="font-data-mono text-[11px] tracking-widest text-highlight-amber">SUBJECT_MATTER</div>
             </div>
-            <h1 class="font-headline-md text-5xl md:text-6xl text-primary mb-12 tracking-wide border-b border-white/10 pb-8">PHYSICS</h1>
-            
+            <h1
+                class="font-headline-md text-5xl md:text-6xl text-primary mb-12 tracking-wide border-b border-white/10 pb-8">
+                PHYSICS</h1>
+
             <article class="prose prose-invert prose-lg font-body-reading text-on-surface-variant/90 leading-relaxed">
                 <p class="font-data-mono text-sm tracking-widest opacity-70">
                     [ WILL UPDATE SOON! ]
@@ -106,7 +169,7 @@
 
             time += 0.02;
 
-            const spacing = 35;
+            const spacing = window.innerWidth < 768 ? 55 : 35;
             const rows = Math.floor(height / spacing) + 1;
             const cols = Math.floor(width / spacing) + 1;
 
@@ -158,13 +221,30 @@
         }
 
         window.addEventListener('resize', resize);
-        window.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
+        window.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; });
+        window.addEventListener('touchmove', (e) => { mouseX = e.touches[0].clientX; mouseY = e.touches[0].clientY; }, { passive: true });
+        window.addEventListener('mouseout', () => { mouseX = -1000; mouseY = -1000; });
+        window.addEventListener('touchend', () => { mouseX = -1000; mouseY = -1000; });
+
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const bar1 = document.getElementById('bar1'), bar2 = document.getElementById('bar2'), bar3 = document.getElementById('bar3');
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.toggle('open');
+                hamburger.setAttribute('aria-expanded', isOpen);
+                bar1.style.transform = isOpen ? 'translateY(6px) rotate(45deg)' : '';
+                bar2.style.opacity = isOpen ? '0' : '1';
+                bar3.style.transform = isOpen ? 'translateY(-6px) rotate(-45deg)' : '';
+                bar3.style.width = isOpen ? '1.5rem' : '1rem';
+            });
+            document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+        }
 
         resize();
         animate();
     </script>
 </body>
+
 </html>

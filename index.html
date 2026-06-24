@@ -782,30 +782,31 @@
             ctx.lineWidth = 1;
 
             let strokeColor = 'rgba(255, 255, 255, 0.08)';
-            let spacing = window.innerWidth < 768 ? 60 : 40;
+            let spacing = window.innerWidth < 768 ? 30 : 40;
             let amplitude = window.innerWidth < 768 ? 10 : 30;
             let phaseFreq = 0.005;
 
             if (scrollDepth > 0.2 && scrollDepth < 0.5) {
-                spacing = window.innerWidth < 768 ? 70 : 50;
+                spacing = window.innerWidth < 768 ? 35 : 50;
                 strokeColor = 'rgba(141, 153, 174, 0.15)';
                 amplitude = window.innerWidth < 768 ? 5 : 15;
             } else if (scrollDepth >= 0.5) {
-                spacing = (window.innerWidth < 768 ? 80 : 60) + (scrollDepth * 20);
+                spacing = (window.innerWidth < 768 ? 40 : 60) + (scrollDepth * 20);
                 strokeColor = `rgba(229, 181, 103, ${0.05 + scrollDepth * 0.05})`;
                 phaseFreq = 0.01 + (scrollDepth * 0.01);
                 amplitude = (window.innerWidth < 768 ? 15 : 40) + (Math.sin(time * 2) * 20);
             }
 
-            const rows = Math.floor(height / spacing) + 2;
-            const cols = Math.floor(width / spacing) + 2;
+            const cols = Math.floor(width / spacing) + 1;
+            const rows = Math.floor(height / spacing) + 15; // +15 to cover the updraft shift
+            const offsetX = (width - ((cols - 1) * spacing)) / 2;
 
             for (let y = 0; y < rows; y++) {
                 ctx.beginPath();
                 ctx.strokeStyle = strokeColor;
                 for (let x = 0; x < cols; x++) {
-                    const px = x * spacing;
-                    const py = (y * spacing) - (currentScroll * 0.2) % spacing;
+                    const px = (x * spacing) + offsetX;
+                    const py = ((y - 1) * spacing) - (currentScroll * 0.2) % spacing;
 
                     const noise = Math.sin(px * phaseFreq + time) *
                         Math.cos(py * phaseFreq - time * 0.8) * amplitude;
@@ -815,7 +816,7 @@
                     if (x === 0) {
                         ctx.moveTo(pt.x, pt.y);
                     } else {
-                        const prevX = (x - 1) * spacing;
+                        const prevX = ((x - 1) * spacing) + offsetX;
                         const prevPy = py;
                         const prevNoise = Math.sin(prevX * phaseFreq + time) *
                             Math.cos(prevPy * phaseFreq - time * 0.8) * amplitude;
